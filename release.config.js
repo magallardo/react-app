@@ -1,6 +1,6 @@
 module.exports = {
     branches: "main",
-    repositoryUrl: "https://github.com:magallardo/react-app",
+    repositoryUrl: "https://github.com/magallardo/react-app",
     plugins: [
         '@semantic-release/commit-analyzer',
         '@semantic-release/release-notes-generator',
