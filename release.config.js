@@ -7,7 +7,7 @@ module.exports = {
     [
       "@semantic-release/github",
       {
-        asserts: [
+        assets: [
           { path: "build.zip", label: "Build" },
           { path: "coverage.zip", label: "Coverage" }
         ]
