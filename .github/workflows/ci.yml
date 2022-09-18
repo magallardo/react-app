@@ -18,9 +18,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Use NodeJS
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: "12.x"
+          node-version: "16"
       - run: npm ci
       - run: npm run format:check
       - run: npm test -- --coverage
