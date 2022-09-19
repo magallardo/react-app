@@ -1,0 +1,19 @@
+name: Notify on Issue
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  slack-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Send Slack Message"
+      # - name: send a slack message
+      #   uses: docker://technosophos/slack-notify
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      #     SLACK_MESSAGE: "Hello slack"
+      # - name: Send Slack Message with curl
+      #   run: |
+      #     curl -X POST -H 'Content-type: application/json' --data '{"text":"New issue created: <${{ github.event.issue.html_url }}|${{github.event.issue.title}}.>}'' ${{ secrets.SLACK_WEBHOOK }}

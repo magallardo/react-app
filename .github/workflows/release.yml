@@ -1,0 +1,19 @@
+name: Notify on Release
+on:
+  release:
+    types: [published]
+
+jobs:
+  slack-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Send Slack Message"
+      # - name: send a slack message
+      #   uses: docker://technosophos/slack-notify
+      #   env:
+      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+      #     SLACK_MESSAGE: "Hello slack"
+      # - name: Send Slack Message with curl
+      #   run: |
+      #     curl -X POST -H 'Content-type: application/json' --data '{"text":"New release ${{ github.event.release.tag_name }} is out, <${{ github.event.release.html_url }}|check it out now.>"}' ${{ secrets.SLACK_WEBHOOK }}
