@@ -1,0 +1,14 @@
+name: Hello World
+author: Marcelo Gallardo
+description: Say Hello
+inputs:
+  who-to-gree:
+    description: 'Who to gree'
+    required: true
+    default: people
+outputs:
+  time:
+    description: 'The greeting time'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
