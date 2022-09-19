@@ -8,7 +8,7 @@ async function run() {
     const body = core.getInput("body");
     const assignees = core.getInput("assignees");
 
-    const oktokit = new github.Github(token);
+    const oktokit = new github.GitHub(token);
 
     const response = await oktokit.issues.create({
       // owner: github.context.repo.owner,
