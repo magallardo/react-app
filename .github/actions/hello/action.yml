@@ -3,12 +3,12 @@ author: Marcelo Gallardo
 description: Say Hello
 inputs:
   who-to-greet:
-    description: 'Who to greet'
+    description: "Who to greet"
     required: true
     default: people
 outputs:
   time:
-    description: 'The greeting time'
+    description: "The greeting time"
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
