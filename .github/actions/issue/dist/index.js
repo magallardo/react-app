@@ -6129,7 +6129,7 @@ module.exports = /******/ (function (modules, runtime) {
           const body = core.getInput("body");
           const assignees = core.getInput("assignees");
 
-          const octokit = new github.getOctokit(token);
+          const octokit = new github.GitHub(token);
 
           const response = await octokit.issues.create({
             // owner: github.context.repo.owner,
